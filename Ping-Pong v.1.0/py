@@ -1,0 +1,14 @@
+from pygame import *
+from random import randint
+window = display.set_mode((700,500))
+background = transform.scale(image.load('neon.jpg'),(700,500))
+clock = time.Clock()
+FPS = 60
+finish = True
+while finish:
+    for e in event.get():
+        if e.type == QUIT:
+            finish = False
+    window.blit(background,(0,0))
+    clock.tick(FPS)
+    display.update()
